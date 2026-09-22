@@ -1,12 +1,12 @@
-# 🥗 Turkish Cuisine Dietitian VLM (Turk-Mutfagi-Diyetisyen)
+# 🥗 Turkish Cuisine VLM (turkish-cuisine-vlm)
 
-[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Model%20Card-yellow)](https://huggingface.co/Turhan123/turk-mutfagi-diyetisyen-vlm)
+[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Model%20Card-yellow)](https://huggingface.co/Turhan123/turkish-cuisine-vlm)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-green)](https://www.python.org/)
 
 > 🎓 **Academic Project:** This project was developed as a **Senior Design Project (Bitirme Projesi)** at **Fırat University, Department of Software Engineering**.
 
-**Turk-Mutfagi-Diyetisyen-VLM** is a specialized Vision-Language Model (VLM) designed to recognize traditional Turkish foods from images, estimate their nutritional values, and provide dietary advice.
+**turkish-cuisine-vlm** is a specialized Vision-Language Model (VLM) designed to recognize traditional Turkish foods from images, estimate their nutritional values, and provide dietary advice.
 
 Fine-tuned on **Qwen2-VL-2B-Instruct** using **LoRA (Low-Rank Adaptation)**, this model bridges the gap between general AI and cultural gastronomy.
 
@@ -16,7 +16,7 @@ Fine-tuned on **Qwen2-VL-2B-Instruct** using **LoRA (Low-Rank Adaptation)**, thi
 
 The trained model weights and inference demo are available on Hugging Face:
 
-👉 **[View Model on Hugging Face](https://huggingface.co/Turhan123/turk-mutfagi-diyetisyen-vlm)**
+👉 **[View Model on Hugging Face](https://huggingface.co/Turhan123/turkish-cuisine-vlm)**
 
 ---
 
@@ -41,8 +41,8 @@ This repository contains the source code for data preparation, fine-tuning, and 
 To run the code locally or in Google Colab, install the required dependencies:
 
 ```bash
-git clone https://github.com/your-username/Turkish_Cuisine_Dietitian_VLM.git
-cd Turkish_Cuisine_Dietitian_VLM
+git clone https://github.com/turhanGoksu/turkish-cuisine-vlm.git
+cd turkish-cuisine-vlm
 pip install -r requirements.txt
 ```
 
@@ -89,7 +89,7 @@ base_model = Qwen2VLForConditionalGeneration.from_pretrained(
     device_map="auto", 
     torch_dtype="auto"
 )
-model = PeftModel.from_pretrained(base_model, "Turhan123/turk-mutfagi-diyetisyen-vlm")
+model = PeftModel.from_pretrained(base_model, "Turhan123/turkish-cuisine-vlm")
 processor = Qwen2VLProcessor.from_pretrained("Qwen/Qwen2-VL-2B-Instruct")
 
 # Inference
@@ -140,5 +140,3 @@ This project was built using open-source resources and methodologies. Special th
 ## 📜 License
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
-
----
